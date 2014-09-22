@@ -1,23 +1,42 @@
 ---
-layout: default
+layout: home
 ---
 
-<div class="home">
+<main id="content" class="content" role="main">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+    {% for post in paginator.posts %}
+    <article class="post">
+        <header class="post-header">
+            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        </header>
+        <section class="post-excerpt">
+            <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+                <a href="{{ post.url }}" class="read-more">&raquo;</a>
+            </p></a>
+        </section>
+        <footer class="post-meta">
+            {% if site.author_image %}<img class="author-thumb" src="{{ site.author_image}}" alt="Author image" nopin="nopin" />{% endif %}
+            {{ site.author }}
+            <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+        </footer>
+    </article>
     {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <nav class="pagination" role="pagination">
 
-</div>
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <a class="newer-posts" href="/" title="Previous Page">&laquo; Newer Posts</a>
+        {% else %}
+        <a class="newer-posts" href="/page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Newer Posts</a>
+        {% endif %}
+        {% endif %}
+
+        <span class="page-number"> Page {{ paginator.page }} of {{ paginator.total_pages }} </span>
+
+        {% if paginator.next_page %}
+        <a class="older-posts" href="/page{{ paginator.next_page }}/" title="Next Page">Older Posts &raquo;</a>
+        {% endif %}
+    </nav>
+
+</main>
