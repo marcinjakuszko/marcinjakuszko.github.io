@@ -137,6 +137,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 .icon-feed:before {
     content: "\f601";
+    margin-right: 0.5rem;
 }
 .icon-twitter:before {
     content: "\f602";
@@ -479,6 +480,11 @@ margin on the iframe, cause it breaks stuff. */
     overflow: hidden;
 }
 
+.main-header-opacity {
+    background: rgba(0,0,0,0.5);
+    padding: 0.5rem 0 2rem 0;
+}
+
 .main-header .inner {
     width: 80%;
 }
@@ -607,11 +613,12 @@ margin on the iframe, cause it breaks stuff. */
     white-space: nowrap;
     border-radius: 3px;
     transition: all ease 0.3s;
+    margin: 1rem;
 }
-.subscribe-button:before {
-    font-size: 9px;
-    margin-right: 6px;
-}
+/*.subscribe-button:before {*/
+    /*font-size: 9px;*/
+    /*margin-right: 6px;*/
+/*}*/
 
 /* Special styles when overlaid on an image*/
 .main-nav.overlay {
@@ -656,7 +663,7 @@ margin on the iframe, cause it breaks stuff. */
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
     margin: 10px 0 10px 0;
-    font-size: 5.6rem;
+    font-size: 4.6rem;
     letter-spacing: -1px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
@@ -1311,7 +1318,7 @@ body:not(.post-template) .post-title {
 @media only screen and (max-width: 1600px) {
 
     .page-title {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .page-description {
@@ -1406,7 +1413,7 @@ body:not(.post-template) .post-title {
     }
 
     .page-title {
-        font-size: 4rem;
+        font-size: 3rem;
         letter-spacing: -1px;
     }
 
@@ -1602,7 +1609,7 @@ body:not(.post-template) .post-title {
     }
 
     .page-title {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .page-description {
