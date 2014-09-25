@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Aspirujący pragmatyk, programista oraz projektant.
   Lifestyle, geek, code - w takiej tematyce osadzone są wpisy autora.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:4000" # the base hostname & protocol for your site
+url: "http://jakuszko.eu" # the base hostname & protocol for your site
 twitter_username: marcinjakuszko
 github_username:  marcinjakuszko
 
