@@ -2,11 +2,11 @@
 title: Marcin Jakuszko
 email: marcin.jakuszko@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can <br> edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Blog Marcina Jakuszko.
+  Aspirujący pragmatyk, programista oraz projektant.
+  Lifestyle, geek, code - w takiej tematyce osadzone są wpisy autora.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jakuszko.eu" # the base hostname & protocol for your site
+url: "http://localhost:4000" # the base hostname & protocol for your site
 twitter_username: marcinjakuszko
 github_username:  marcinjakuszko
 
@@ -20,5 +20,10 @@ cover: "/images/cover.jpg" #cover image url to be displayed on index (or false i
 logo: false #logo url to be displayed on index (or false if not)
 author: Marcin Jakuszko #site author
 author_image: "/images/author.jpg" #url for author avatar
+author_description: Aspirujący pragmatyk, programista i projektant. #author bio
+quote: Dobre API jest jak meble z IKEA. #header title
+
+disqus: true #enables or disables Disqus on post pages
+
 
 
