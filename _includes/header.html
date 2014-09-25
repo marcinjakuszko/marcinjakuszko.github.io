@@ -2,11 +2,16 @@
     <nav class="main-nav overlay clearfix">
         {%if site.logo %}<a class="blog-logo" href="{{ site.url }}"><img src="{{ site.logo }}" alt="Blog Logo" /></a>{% endif %}
         <a class="subscribe-button icon-feed" href="{{ site.url }}/feed.xml">Subscribe</a>
+        <a class="subscribe-button" href="http://jakuszko.blogspot.com">korea</a>
     </nav>
     <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">{{ site.title }}</h1>
-            <h2 class="page-description">{{site.description}}</h2>
+        <div class="main-header-opacity">
+            <div class="main-header-content inner">
+                <h1 class="page-title">{{ site.quote }}</h1>
+                <h2 class="page-description">{{ site.author_description }}</h2>
+                <h2 class="page-author">{{ site.author }}</h2>
+
+            </div>
         </div>
     </div>
     <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
